@@ -1,0 +1,12 @@
+class Solution:
+    def removeElement(self, nums: list[int], val: int) -> int:
+        i = 0
+        n=len(nums)
+        while i<n:
+            if nums[i]==val:
+                nums[i]=nums[n-1]  #assign last to val value
+                n-=1 #decrement n so that last value is not assignd again n again
+            else:
+                i+=1 #only if not equal increment, so that even if first n last equal, it gets checked again
+        return n
+        
