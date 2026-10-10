@@ -1,0 +1,10 @@
+class Solution(object):
+    def isAnagram(self, s, t):
+        ssorted="".join(sorted(s)) #joining the sorted list of ch in s
+        tsorted="".join(sorted(t))
+        if ssorted==tsorted: # if sorted is equal, then anagram
+            return True
+        else:
+            return False
+        
+        
