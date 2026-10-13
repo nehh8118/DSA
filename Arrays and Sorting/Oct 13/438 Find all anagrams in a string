@@ -1,0 +1,22 @@
+class Solution:
+    def findAnagrams(self, s: str, p: str) -> list[int]:
+        #Brute force
+        n=len(s)-len(p)+1 #fixed sliding window in size of p
+        res=[]
+        sub=""
+        for i in range(n):
+            j=i+len(p)
+            sub=s[i:j] #accesing each substring in s
+            if sorted(sub)==sorted(p): #checking if the substring is an anagram of p
+                res=res+[i] #adding index to list
+        return res
+
+        #req: return all starting indices of p's anagrams in s in a list
+    
+
+
+
+       
+
+
+        
