@@ -1,0 +1,14 @@
+class Solution:
+    def containsNearbyDuplicate(self, nums: list[int], k: int) -> bool:
+        hash={}
+        for i, num in enumerate(nums): #to access both index and num in the array
+            if num in hash and abs(hash[num]-i)<=k: #if duplicate is found, check differnce of current index and prev index
+                return True
+            else:
+                hash[num]=i #into the hash if dup is not there
+        return False
+
+#req: return true if duplicates exists within k indices in an array, else false
+
+        
+
