@@ -1,0 +1,10 @@
+class Solution: 
+    def selectionSort(self, arr):
+        # code here
+        n=len(arr)
+        for i in range(n): #to run for n times in an arr
+            minIndex=i #assigning to the first element
+            for j in range(i+1, n): #assumin elements till i are sorteed
+                if arr[j] < arr[minIndex]: 
+                    minIndex=j #update minindex as lower element found
+            arr[i], arr[minIndex] = arr[minIndex], arr[i] #swap with found
