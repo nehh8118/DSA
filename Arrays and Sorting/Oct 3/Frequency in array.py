@@ -9,3 +9,13 @@ class Solution:
             else:
                 count[num]=1 #else add to dictionary
         return res
+
+n = int(input("Enter the number of elements in the list: "))
+arr = list(map(int, input("Enter the elements of the list separated by space: ").split()))
+
+obj = Solution()
+result = obj.countFreq(arr)
+print(result)
+
+#req: count the frequency of each number in the array and return its frequency.
+#approach: The solution uses a dictionary to count the occurrences of each number in the array and returns the dictinary

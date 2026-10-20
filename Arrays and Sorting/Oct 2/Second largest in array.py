@@ -13,6 +13,19 @@ class Solution:
         else:
             return SecondLargest
 
+n = int(input("Enter the number of elements in the list: "))
+arr = list(map(int, input("Enter the elements of the list separated by space: ").split()))
+
+obj = Solution()
+result = obj.getSecondLargest(arr)
+print(result)
+
+#req: return the second largest element in an array
+#approach: The solution initializes two variables, `largest` and `SecondLargest`, to 0.
+# It iterates through the array, updating `largest` and `SecondLargest` as it
+# finds larger numbers. If no second largest number is found, it returns -1.
+
+
                 
                 
                 
