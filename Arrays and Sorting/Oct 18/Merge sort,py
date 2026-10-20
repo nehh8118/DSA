@@ -1,0 +1,39 @@
+def mergeSort(arr):
+    if len(arr) > 1:
+        m = len(arr) //2
+        left=arr[:m]
+        right=arr[m:]
+        mergeSort(left)
+        mergeSort(right)
+
+        i=j=k=0
+        while i<len(left) and j<len(right):
+            if left[i]<right[j]:
+                arr[k]=left[i]
+                i+=1
+            else:
+                arr[k]=right[j]
+                j+=1
+            k+=1
+
+        while i<len(left):
+            arr[k]=left[i]
+            i+=1
+            k+=1
+
+        while j<len(right):
+            arr[k]=right[j]
+            j+=1
+            k+=1
+
+    return arr
+
+arr = [int(x) for x in input("Enter the elements of the list separated by space: ").split()]
+print("Original array:", arr)
+print("Sorted array:", mergeSort(arr))
+
+'''
+req: Sort an array of integers using merge sort algorithm.
+approach: The solution uses a merge sort algorithm to sort the array. It recursively divides the
+    array into halves until it reaches arrays of size 1, then merges them back together in sorted order.
+'''
