@@ -12,13 +12,15 @@ class Solution:
             arr[i], arr[minIndex] = arr[minIndex], arr[i]
             
         return arr[:k]
-
+    
+solution = Solution()
 n = int(input("Enter the number of elements in the list: "))
 arr = list(map(int, input("Enter the elements of the list separated by space: ").split()))
 print("Enter the value of k: ")
 k = int(input())
-print("The k smallest elements are:", obj.FindKSmallest(arr, k))    
+print("The k smallest elements are:", solution.FindKSmallest(arr, k))    
 
 '''
 req: Find the k smallest elements in an array.
-approach: The solution uses a selection sort algorithm to find the k smallest elements in the array'''
+approach: The solution uses a selection sort algorithm to find the k smallest elements in the array
+'''

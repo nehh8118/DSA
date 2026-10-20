@@ -13,12 +13,12 @@ class Solution:
                 r-=1
         return nums
 
-    solution = Solution()
-    n = int(input("Enter the number of elements in the list: "))
-    arr = list(map(int, input("Enter the elements of the list separated by space: ").split()))
-    print("The sorted array is:", solution.sortArrayByParity(arr))
+solution = Solution()    
+n = int(input("Enter the number of elements in the list: "))
+arr = list(map(int, input("Enter the elements of the list separated by space: ").split()))
+print("The sorted array is:", solution.sortArrayByParity(arr))
                 
-    '''
+'''
         #uses more space
         n=len(nums)
         even=[]
@@ -30,7 +30,7 @@ class Solution:
                 odd= odd + [nums[i]]
         nums=even+odd
         return nums
-        '''
+'''
 
 
 
